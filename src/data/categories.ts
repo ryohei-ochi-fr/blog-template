@@ -1,8 +1,2 @@
 // List of categories for blog posts
-export const CATEGORIES = [
-	'Category 1',
-	'Category 2',
-	'Category 3',
-	'Category 4',
-	'Category 5'
-] as const
+export const CATEGORIES = ['新着情報', '労働組合とは', '2025年 春闘', '沿革'] as const

@@ -11,7 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        uses: pnpm/action-setup@v2
     
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -19,6 +18,11 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+          with:
+            version: 10
 
       - name: Install modules
         run: pnpm install

@@ -9,12 +9,23 @@ import EditBlog from '@/components/editBlog'
 const { title, description, image, articleDate } = Astro.props
 ---
 
-<html lang='en' class='scroll-smooth'>
+<html lang='ja' class='scroll-smooth'>
 	<head>
 		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
 		<ProviderTheme />
 		<ProviderAnimations />
-	</head>
+		<script async src='https://www.googletagmanager.com/gtag/js?id=G-NT9Q42LFBY'></script><script>
+			window.dataLayer = window.dataLayer || []
+			function gtag() {
+				dataLayer.push(arguments)
+			}
+			gtag('js', new Date())
+
+			gtag('config', 'G-NT9Q42LFBY')
+		</script></head
+	>
+
+	<!-- Google tag (gtag.js) -->
 
 	<body class='bg-white text-stone-950 dark:bg-[#0a0910] dark:text-white'>
 		<main

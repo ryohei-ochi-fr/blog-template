@@ -31,5 +31,5 @@ jobs:
         run: pnpm build
 
       - name: Deploy to S3
-        run: aws s3 sync --delete ./dist/ s3://${{ secrets.BUCKET_ID }}
+        run: aws s3 sync --delete ./dist/ s3://${{ secrets.S3_BUCKET }}
 

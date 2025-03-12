@@ -1,0 +1,25 @@
+---
+title: 'ウェブサイト開設の技術的背景'
+description: 'FutureRays労働組合のウェブサイトを構成するAWS活用について'
+pubDate: '2025/02/13'
+heroImage: '../../assets/images/placeholder-social.jpg'
+category: '新着情報'
+tags: ['Information', 'FutureRays', 'Union']
+draft: true
+---
+
+## ウェブサイト開設の技術的背景
+
+FutureRays労働組合のウェブサイトは高可用性と低コストの両立を目指しています。
+
+このため、AWSを活用しています。
+
+ドメイン名はRoute 53で取得し、CloudFrontでCDNを利用しています。
+
+「futurerays-union.click」のドメイン維持費は、年間3USDです。
+
+また、サーバーレス構成を用いて、S3バケットで静的コンテンツ(astroベースのSSG)をホスティングしており、月間費用は数円です。
+
+Github Actionsを利用して、masterブランチへのプッシュをトリガーにビルドとデプロイを自動化(CI/CD)しています。
+
+<a href='/post/contact/'>お問い合わせフォーム</a>からご連絡ください。
